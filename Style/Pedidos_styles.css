@@ -1,0 +1,206 @@
+#tblPedido {
+    position: relative;
+    width: 651pt;
+    left: 126.657072pt;
+}
+
+#tblPedido tr td {
+    border: solid white 0.752929pt;
+    justify-content: center;
+}
+
+.tbl_titulo {
+    text-align: center;
+}
+
+.quantidade1 {
+    height: 22.587857pt;
+    width: 52.705pt;
+    position: relative;
+    /* border: solid 1px rgb(253, 253, 253); */
+    display: flex;
+    left: 52.705pt;
+    bottom: 6.023429pt;
+}
+
+#btn_fechar_prepag {
+    position: relative;
+    width: 30pt;
+    height: 30pt;
+    left: 457pt;
+    top: 7pt;
+}
+
+#btn_fechar_prepag:hover {
+    transform: scale(1.1);
+}
+
+.tbl_total {
+    text-align: right;
+}
+
+.tbmElem {
+    justify-content: center;
+    border: white solid 0.752929pt;
+}
+
+td.total {
+    text-align: right;
+}
+
+#btn_complete {
+    left: 737pt;
+    width: 119.715643pt;
+    top: -65pt;
+    font-size: larger;
+    height: 41.411071pt;
+    background-color: beige;
+    color: black;
+}
+
+.btn_eliminar {
+    background-image: url(../imgs/lixo.png);
+    width: 29pt;
+    background-size: 28pt;
+    top: 11.010643pt;
+    position: relative;
+    height: 26pt;
+    left: 103pt;
+    text-align: center;
+    border-radius: 4.517571pt;
+}
+
+.btn_plus1 {
+    top: 0pt;
+    /* height: 25pt; */
+    width: 23pt;
+    /* left: 49pt; */
+    border: beige 1px solid;
+}
+
+.btn_plus1:hover {
+    transform: scale(1.1);
+}
+
+.btn_plus1 p {
+    position: relative;
+    top: -1pt;
+    left: 8pt;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.btn_buttonChange {
+    background-image: url(../imgs/mudar.png);
+    left: 69pt;
+    top: -15pt;
+}
+
+.btnbtn {
+    justify-content: space-evenly;
+}
+
+.buttonChange:hover {
+    transform: scale(1.2);
+}
+
+.btn_eliminar:hover {
+    transform: scale(1.2);
+}
+
+#pedidos_container {
+    position: relative;
+    /* display: flex; */
+    /* border: solid 2px rgb(255, 255, 255); */
+    border-radius: 8.5pt;
+    width: 918pt;
+    height: 369pt;
+    margin: 7.529286pt auto;
+    /* filter: blur(4px); */
+    background: #1b1e21d6;
+    /* margin-left: auto; */
+    /* flex-wrap: wrap; */
+    left: 3.317357pt;
+    top: 3pt;
+}
+
+.elmQuanti {
+    position: relative;
+    left: 394.534572pt;
+    color: beige;
+    height: 18.823214pt;
+    background-color: beige;
+    border-radius: 7.529286pt;
+    top: -45.175714pt;
+}
+
+.tblElm {
+    max-height: max-content;
+}
+
+.limiteTabela {
+    overflow-y: auto;
+    position: relative;
+    height: 290pt;
+    top: 19pt;
+    width: 994pt;
+    left: 3.317357pt;
+}
+
+.titleText {
+    font-family: Tahoma, sans-serif;
+}
+
+.col0 {
+    text-align: center;
+}
+
+.col1 {
+    text-align: left;
+}
+
+.col2 {
+    text-align: right;
+}
+
+.col3 {
+    text-align: center;
+    width: 120pt;
+}
+
+.tblElem {
+    border: solid 1px white;
+}
+
+#tblPedido td {
+    border: none!important;
+}
+
+#tblPedido tr {
+    border-left: none!important;
+    border-right: none!important;
+}
+
+.hovertext1:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+}
+
+.fade {
+    margin: 50px;
+    padding: 50px;
+    background-color: lightgreen;
+    opacity: 1;
+}

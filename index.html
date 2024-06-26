@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>MY APP</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+
+    <link rel="stylesheet" href="./Style/homePage_style.css">
+    <link rel="stylesheet" href="./Style/navBar_styles.css">
+    <link rel="stylesheet" href="./Style/menuPage_styles.css">
+    <link rel="stylesheet" href="./Style/Pop_up_filtros.css">
+    <link rel="stylesheet" href="./Style/Pedidos_styles.css">
+    <link rel="stylesheet" href="./Style/Faturas_styles.css">
+    <link rel="stylesheet" href="./Style/firstPage.css">
+    <link rel="stylesheet" href="./Style/Chamar_Empregado.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="./Style/flipcard.css">
+
+    <script src="./Scripts/navBar_script.js" defer></script>
+    <script src="./Scripts/Pop_ups.js" defer></script>
+    <script src="./Scripts/main_storage.js" defer></script>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="Pop_ajuda">
+            <h1 id="title_ajuda">Sobre</h1>
+            <div id="content_ajuda">
+                <p class=texto_ajuda>
+                    A aplicação DigitalEmployee foi desenvolvida no âmbito da cadeira de 2º ano de LTI Interação com Computadores, com o propósito de se ser utilizada no contexto de restaurante.</p>
+                <ul class=texto_ajuda>
+                    <p class=" alinhamento">Através desta aplicação é possível:
+                    </p>
+                    <li>Efetuar pedidos através do menu;</li>
+                    <li> Pagar a sua refeição;
+                    </li>
+                    <li>Aceder ao histórico de faturas;</li>
+                    <li>Ver a disponibilidade da casa de banho e reservá-la;
+                    </li>
+                    <li> Pedir uma sugestão do chefe;
+                    </li>
+                    <li>Caso tenha alguma questão, pode pedir ajuda ao nosso empregado através do ícone “mão”, e o mesmo irá ao seu encontro.</li>
+                </ul>
+                <div class="sobre">
+                    <p class="realizado">Projeto realizado por:</p>
+                    <div class=" goncalo">
+                        <img class="imgCriador1" src="../projeto_IC_final/imgs/foto1 - Copy.jpg" alt="">
+                        <p class="textoNome1">Gonçalo Domingues</p>
+                        <p class="textoNumero1">Nº 51751</p>
+                    </div>
+
+                    <div class="heie">
+                        <img class="imgCriador3" src="../projeto_IC_final/imgs/foto3.jpg" alt="">
+                        <p class="textoNome3">Heie Sessa</p>
+                        <p class="textoNumero3">Nº 58662</p>
+
+                    </div>
+                    <div class="manel">
+                        <img class="imgCriador2" src="../projeto_IC_final/imgs/foto2.jpg" alt="">
+                        <p class="textoNome2">Manuel Martinho </p>
+                        <p class="textoNumero2">Nº 58664</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <img id="fechar_ajuda" onclick="fechar_pop('Pop_ajuda')" src="./imgs/cancel.png" />
+        </div>
+        <div id="merda"></div>
+        <div id="adicionar_fatura"></div>
+        <div id="pageOne">
+            <div id="home_page_buttons">
+                <div id="divOla">
+                    <p> Seja bem-vindo ao nosso restaurante, utilize a nossa aplicação para fazer o seu pedido.</p>
+                </div>
+                <button onclick="mostrar('ecra_menu')" class="botaoHome botaoUm">Menu <img id="icon_ecra1" src="./imgs/menu.png" alt=""> <i class="material-icons buttons-icon-pos menu_icon">restaurant_menu</i></button>
+                <button onclick="mostrar('ecra_faturas')" class="botaoHome botaoDois">Faturas <img id="icon_ecra2" src="./imgs/fatura.png" alt=""><i class="material-icons buttons-icon-pos faturas_icon">request_quote</i></button>
+                <button class="botaoHome botaoQuatro" onclick="abrir_pop('Chamar_empregado')">Chamar empregado <img id="icon_ecra0" src="./imgs/mao.png" alt=""> <i class="material-icons buttons-icon-pos empregado_icon">back_hand</i></button>
+                <button onclick="abrir_pop2('Pop_ajuda')" class="botaoHome botaoHelp">Sobre <img id="icon_Help" src="./imgs/help.png" alt=""> </button>
+
+                <div class="cracha"> </div>
+
+            </div>
+        </div>
+
+
+        <div id="Pop_WC">
+            <img id="btn_fechar_WC" onclick="fechar_pop('Pop_WC')" src="./imgs/cancel.png" />
+            <h1 id="Titulo_WC">Estado do WC</h1>
+            <p id="texto_livres"> Senha atual para a casa de banho: <span id="senha_atual">0</span></p>
+
+            <button id="btnWC" onclick="abrir_pop('texto_senha'), aparece_notificacao('notificacao_WC')">Reservar</button>
+            <p id="texto_senha"> A sua senha : <span id="senha_cliente"> 6 </span></p>
+        </div>
+
+        <div id="Pop_faturas">
+            <img id="btn_fechar_prepag" onclick="fechar_pop('Pop_faturas')" src="./imgs/cancel.png" />
+            <button id="btn_pagar" onclick="fechar_pop('Pop_faturas'), trataFatura(), aparece_notificacao('notificacao_pedido')">Pagar</button>
+            <button id="btn_pagar_depois" onclick="fechar_pop('Pop_faturas')">Editar pedido</button>
+            <p class="text_pagamento">Conclua o seu pedido após efetuar o pagamento.</p>
+            <div class="fotos_pagamennto">
+                <div class=" cartao"></div>
+                <div class="mbway"></div>
+                <div class=" dinheiro"></div>
+            </div>
+            <form action="" class="forms_position">
+                <input type="text" id="fname" name="fname" placeholder="Nome"><br>
+                <input type="text" id="lname" name="lname" placeholder="Nº Contribuinte"><br><br></form>
+            <p class="text_fatura">Se pretender fatura com contribuinte, preencha os seguintes dados.</p>
+
+        </div>
+
+        <div id="Chamar_empregado">
+            <img id="btn_fecha_empregado" onclick="fechar_pop('Chamar_empregado')" src="./imgs/cancel.png" />
+            <p id="text_empregado"> Se necessita de auxílio de algum empregado do estabelecimento carregue no botão</p>
+            <button id="btn_chamar" onclick="aparece_notificacao('notificacao_empregado'), fechar_pop('Chamar_empregado')">Chamar Empregado</button>
+        </div>
+
+
+
+
+        <div class="notificacao" id="notificacao_pedido">
+            <p class="mensagem_cofirmacao">O seu pedido ficará pronto em 15 minutos.</p>
+
+        </div>
+
+        <div class="notificacao" id="notificacao_WC">
+            <p class="mensagem_cofirmacao">A sua reserva foi realizada com sucesso.</p>
+
+        </div>
+
+        <div class="notificacao" id="notificacao_empregado">
+            <p class="mensagem_cofirmacao">Um empregado virá auxiliá-lo/a.</p>
+
+        </div>
+
+        <div class="notificacao" id="notificacao_da_senha">
+            <p class="mensagem_cofirmacao">É a sua vez de utilizar a casa de banho.</p>
+
+        </div>
+
+
+        <div class="ecras" id="ecra_menu">
+            <div id="div_menu">
+
+                <div class="filtroFosco">
+
+                </div>
+                <div class="btn_back"><img onclick="mostrar_anterior(), destruir('adiciona_ao_pedido'), destruir('testa')" src="./imgs/logout.png" alt=""></div>
+
+                <div class="helpIcon">
+                </div>
+                <div id="pop_up_filtros">
+                    <button id="btn_fechar_filtro" onclick="fechar_pop('pop_up_filtros')">X</button>
+                    <button id="btn_confirmar_filtro2">Confirmar</button>
+
+                </div>
+
+
+
+
+                <div id="filter3">
+                    <p class="borderFilter" id="prato" onclick="filterSelection('prato'),mostraFiltro('filtroPrato'),changeColor('prato'), fechar_pop('Chamar_empregado'), fechar_pop('Pop_WC'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">Prato &nbsp&nbsp </p>
+                    <p>|&nbsp&nbsp </p>
+                    <p class="borderFilter" id="bebida" onclick="filterSelection('bebida'),mostraFiltro('filtroBebida'),changeColor('bebida'), fechar_pop('Chamar_empregado'), fechar_pop('Pop_WC'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">Bebida &nbsp&nbsp </p>
+                    <p>|&nbsp&nbsp </p>
+                    <p class="borderFilter" id="sobremesa" onclick="filterSelection('sobremesa'),mostraFiltro('filtroSobremesa'),changeColor('sobremesa'), fechar_pop('Chamar_empregado'), fechar_pop('Pop_WC'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">Sobremesa</p>
+                    <p>|&nbsp&nbsp </p>
+                    <p class="borderFilter" id="sugestao" onclick="apagaPedido(),abrir_pop('random'),randomPrato(),randomBebida(),randomSobremesa(), fechar_pop('Chamar_empregado'), fechar_pop('Pop_WC'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">Sugestão do Chefe!</p>
+                </div>
+
+
+                <div id="random">
+                    <div class="divsRandom" id="randomPrato"></div>
+                    <div class="divsRandom" id="randomBebida"></div>
+                    <div class="divsRandom" id="randomSobremesa"></div>
+
+
+                    <img id="b_fecha_filtro" onclick="fechar_pop('random')" src="./imgs/cancel.png" />
+
+                    <button onclick="trataPedido(),mostraPedido(), mostrar('ecra_pedidos'),fechar_pop('random')" id="confirmar_filtro">Confirmar</button>
+                </div>
+
+                <div id="menu">
+
+                    <div class="scene scene--card  grao prato filterDiv">
+                        <div class="card1 flipCard">
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img0" class="cardImg" src="./imgs/foto1.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato0">Hambúrguer de grão e lentilhas</p>
+                                        <div class="foodInfo">
+                                            <div class="iconFront"></div>
+                                            <div class="imgvegan frontleft">
+                                            </div>
+                                            <p id="cal">420 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor0">13.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class="btn_plus  btn_minusExtra" onclick="tirar_pedido('quantidade_hamburguer_g_l')">-</button>
+                                            <span class="numberPlace" id="quantidade_hamburguer_g_l">0</span>
+                                            <button id="plus" class="btn_plus  btn_plusExtra" onclick="somar('quantidade_hamburguer_g_l'), adicionar_pedido()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card__face card__face--back">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/foto1.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Hambúrguer de grão e lentilhas</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgvegan">
+                                            </div>
+                                            <p id="cal">420 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Grão, cebola, alho, lentilhas, coentro e farinha integral.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card prato  lactose lactosePrato massas camarao filterDiv">
+                        <div class="card1 flipCard">
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img1" class="cardImg" src="./imgs/massaChoco.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle " id="prato1">Massa de Tinta de choco c/ camarão</p>
+                                        <div class="foodInfo">
+                                            <div class="imgLactose frontleft"></div>
+                                            <p id="cal">640 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor1">16.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_massa_tinta_choco')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_massa_tinta_choco">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_massa_tinta_choco'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card card__face card__face--back">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/massaChoco.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Massa de Tinta de choco c/ camarão</p>
+                                        <div class="foodInfoBack">
+                                            <div class="iconBack"></div>
+                                            <div class="imgLactose">
+                                            </div>
+                                            <p id="cal">640 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Spaguetti, tinta de choco, alho, camarão e coentro.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="scene scene--card sumoLaranja nacional bebida filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img2" class="cardImg" src="./imgs/sumo-de-laranja.png" alt="">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle " id="prato2">Sumo de Laranja Natural</p>
+
+                                        <div class="foodInfo">
+                                            <p id="cal">140 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor2">3.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_sumo_laranja')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_sumo_laranja">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_sumo_laranja'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card card__face card__face--back   ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/sumo-de-laranja.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Sumo de Laranja Natural</p>
+
+                                        <div class="iconBackPT"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">140 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Laranja do Algarve.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card agua bebida filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img3" class="cardImg" src="./imgs/agua.png" alt="">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato3">Água</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">80 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor3">1.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_agua')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_agua">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_agua'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" card card__face card__face--back    ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/agua.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Água</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">40 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Água do luso.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card bebida cocacola filterDiv">
+                        <div class="card1 flipCard">
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img4" class="cardImg" src="./imgs/cocaCola.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato4">Coca-Cola</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">100 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor4">2.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_coca_cola')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_coca_cola">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_coca_cola'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/cocaCola.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Coca-Cola</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">100 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Água gaseificada, açúcar, extrato de noz de cola e cafeína.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card sobremesa mousse chocolate  gluten glutenLactose filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img5" class="cardImg" src="./imgs/mousse.png" alt="">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato5">Mousse de chocolate</p>
+                                        <div class="foodInfo">
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <div class="imggluten frontleft">
+                                            </div>
+                                            <p id="cal">240 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor5">3.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_mousse')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_mousse">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_mousse'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/mousse.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Mousse de chocolate</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgLactose backtwo">
+                                            </div>
+                                            <div class="imggluten">
+                                            </div>
+                                            <p id="cal">240 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Ovos, manteiga, açúcar e chocolate.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card prato pratoGluten peixe filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img6" class="cardImg" src="./imgs/salmao.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato6">Salmão Grelhado à antiga</p>
+                                        <div class="foodInfo">
+                                            <div class="imggluten frontleft"></div>
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <p id="cal">440 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor6">18.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_salmao')">-</button>
+                                            <span class="numberPlace" id="quantidade_salmao">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_salmao'), adicionar_pedido()">+</button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="card card__face card__face--back  ">
+
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/salmao.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Salmão grelhado à antiga</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imggluten"></div>
+                                            <div class="imgLactose backtwo"></div>
+                                            <p id="cal">440 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Lombo de salmão, batata, alface e tomate.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="scene scene--card prato filterDiv lactosePrato massas vegan">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card ">
+                                <div class="cardImg">
+                                    <img id="img7" class="cardImg" src="./imgs/massaSalada.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato7">Salada de massa c/ Tofú!</p>
+                                        <div class="foodInfo">
+                                            <div class="imgvegan frontleft"></div>
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <p id="cal">220 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor7">11.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_massa_tofu')">-</button>
+                                            <span class="numberPlace" id="quantidade_massa_tofu">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_massa_tofu'), adicionar_pedido()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="card card__face card__face--back  card  ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/massaSalada.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0"> Salada de massa c/ Tofú!</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgvegan">
+                                            </div>
+                                            <div class="imgLactose backtwo">
+                                            </div>
+                                            <p id="cal">220 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Tortiglioni, tofu, tomate e mistura de pimentos.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card  pires filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  pires">
+                                <div class="cardImg ">
+                                    <img id="img8" class="cardImg" src="./imgs/Joao-Pires.jpg " alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato8">João Pires</p>
+                                        <div class="foodInfo">
+                                            <p id="cal ">120 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço ">
+                                            <p class="valor " id="valor8">9.80€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_joao_pires') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_joao_pires">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_joao_pires'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   pires ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/Joao-Pires.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">João Pires</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">120 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Casta Moscatel de Setúbal</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card bebida figos filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  figos ">
+                                <div class="cardImg">
+                                    <img id="img9" class="cardImg " src="./imgs/papaFigos.jpg " alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato9">Papa Figos</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">160 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor9">12.80€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_papa_figos') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_papa_figos">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_papa_figos'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   figos">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/papaFigos.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Papa Figos</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">160 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> 30% Tinta Roriz, 30% Tinta Barroca e 40% Touriga Franca.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="scene scene--card  sobremesa arrozDoce filterDiv ">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card arrozDoce ">
+                                <div class="cardImg">
+                                    <img id="img10" class="cardImg " src="./imgs/Arrozdoce.png " alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato10">Arroz Doce</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">260 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor10">3.80€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_arroz_doce') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_arroz_doce">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_arroz_doce'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   arrozDoce ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/Arrozdoce.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Arroz Doce</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">260 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Arroz, ovos, leite, açúcar, limão e canela.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="scene scene--card  lactosePrato  pratoGluten prato tofu filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card ">
+                                <div class="cardImg">
+                                    <img id="img18" class="cardImg" src="./imgs/SauteTofu.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato18">Massa de tinta de choco c/ Tofú</p>
+                                        <div class="foodInfo">
+                                            <div class="imgvegan frontleft"></div>
+                                            <div class="imggluten fronttwo"></div>
+                                            <p id="cal">120 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor18">6.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_saute')">-</button>
+                                            <span class="numberPlace" id="quantidade_saute">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_saute'), adicionar_pedido()">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="card card__face card__face--back  card  ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/SauteTofu.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Massa de tinta de choco c/ Tofú</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgvegan">
+                                            </div>
+                                            <div class="imggluten backtwo"></div>
+                                            <p id="cal">120 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b>Massa tinta de choco, amêndoas, abacate e cogumelos c/ tofú fumado.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scene scene--card sobremesa petit filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  petit ">
+                                <div class="cardImg">
+                                    <img id="img11" class="cardImg " src="./imgs/petit-gateau.png" alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato11">Petit Gateau com gelado de Baunilha</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">560 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor11">12.80€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_petit') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_petit">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_petit'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back  petit  ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/petit-gateau.png" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Petit Gateau com gelado de Baunilha</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">560 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Chocolate, farinha, açúcar e ovos gelado de baunilha.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="scene scene--card  bebida martini filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card martini">
+                                <div class="cardImg">
+                                    <img id="img13" class="cardImg " src="./imgs/expresso_martini.jpg" alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato14">Expresso Martini</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">260 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor14">10.80€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_expresso') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_expresso">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_expresso'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card__face card__face--back   martini">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/expresso_martini.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Expresso Martini</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">260 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> 50ml de café, 30 ml de vodka e 30 ml de licor Frangelico.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scene scene--card bebida caipi filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  caipi">
+                                <div class="cardImg">
+                                    <img id="img14" class="cardImg " src="./imgs/Caipirinha.jpg " alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato12">Caipirinha</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">260 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor12">8.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_caipi') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_caipi">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_caipi'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back caipi ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/Caipirinha.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Caipirinha</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">260 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> 30 ml de vodka, açúcar e lima.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card bebida cafe filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  cafe">
+                                <div class="cardImg">
+                                    <img id="img15" class="cardImg " src="./imgs/cafe.jpeg" alt=" ">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato15">Café expresso</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">30 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor15">1.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_cafe') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_cafe">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_cafe'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back  cafe">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/cafe.jpeg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Café expresso</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">30 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Café torrado moído Bocage Nicola</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card prato lactosePrato  crostini filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  ">
+                                <div class="cardImg">
+                                    <img id="img16" class="cardImg" src="./imgs/Crostini de Abacate.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato16">Crostini de Abacate</p>
+                                        <div class="foodInfo">
+                                            <div class="imgvegan frontleft"></div>
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <p id="cal">220 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor16">8.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_crostini')">-</button>
+                                            <span class="numberPlace" id="quantidade_crostini">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_crostini'), adicionar_pedido()">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="card card__face card__face--back  ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/Crostini de Abacate.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Crostini de Abacate</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgvegan">
+                                            </div>
+                                            <div class="imgLactose backtwo">
+                                            </div>
+                                            <p id="cal">220 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Abacate, pão torrado, sementes de sesâmo e tomate cherry.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene scene--card prato tartaro peixe filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card  peixe">
+                                <div class="cardImg">
+                                    <img id="img17" class="cardImg" src="./imgs/salmaoTartare.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato17">Tártaro de Salmão</p>
+                                        <div class="foodInfo">
+                                            <div class="imgLactose frontleft"></div>
+                                            <p id="cal">320 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor17">13.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_tartaro')">-</button>
+                                            <span class="numberPlace" id="quantidade_tartaro">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_tartaro'), adicionar_pedido()">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="card card__face card__face--back peixe ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/salmaoTartare.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Tártaro de Salmão</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgLactose">
+                                            </div>
+                                            <p id="cal">320 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Salmão, abacate, mistura de semenetes e teriaki.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="scene scene--card  bebida daiquiri filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card daiquiri ">
+                                <div class="cardImg">
+                                    <img id="img12" class="cardImg " src="./imgs/daiquiri.jpg" alt=" ">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato13">Daiquiri de Morango</p>
+                                        <div class="foodInfo">
+                                            <p id="cal">460 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade ">
+                                        <div class="preço">
+                                            <p class="valor" id="valor13">12.00€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_daiquiri') "><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_daiquiri">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_daiquiri'), adicionar_pedido() "><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back  daiquiri  ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/daiquiri.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Daiquiri de Morango</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+
+                                            <p id="cal">460 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> 50 ml de rum, limão, açúcar e morango.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scene scene--card sobremesa gluten glutenLactose glutenSobremsa redvelvet filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img5" class="cardImg" src="./imgs/redvelvet.jpg" alt="">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato19">Red Velvet</p>
+                                        <div class="foodInfo">
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <div class="imggluten frontleft">
+                                            </div>
+                                            <p id="cal">310 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor19">4.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_red')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_red">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_red'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/redvelvet.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Red Velvet</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgLactose backtwo">
+                                            </div>
+                                            <div class="imggluten">
+                                            </div>
+                                            <p id="cal">310 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Ovos, manteiga, açúcar, farinha, leite vegetal.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scene scene--card sobremesa gluten pudim lactoseSobremesa filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img5" class="cardImg" src="./imgs/Pudim.jpg" alt="">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato21">Pudim Flan</p>
+                                        <div class="foodInfo">
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <div class="imggluten frontleft">
+                                            </div>
+                                            <p id="cal">210 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor21">2.90€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_pudim')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_pudim">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_pudim'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/Pudim.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Pudim Flan</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgLactose backtwo">
+                                            </div>
+                                            <div class="imggluten">
+                                            </div>
+                                            <p id="cal">210 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Açucar de côco, leite de côco, creme de arroz, extrato de baunilha.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scene scene--card sobremesa glutenLactose lactoseSobremesa tartelimao filterDiv">
+                        <div class="card1 flipCard">
+
+                            <div class="card__face card__face--front card   ">
+                                <div class="cardImg">
+                                    <img id="img5" class="cardImg" src="./imgs/TarteLimao.jpg" alt="">
+
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitle" id="prato20">Tarte de limão</p>
+                                        <div class="foodInfo">
+                                            <div class="imgLactose frontleft fronttwo">
+                                            </div>
+                                            <div class="imggluten frontleft">
+                                            </div>
+                                            <p id="cal">150 K/cal</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="cardQuantidade">
+                                        <div class="preço">
+                                            <p class="valor" id="valor20">3.50€</p>
+                                        </div>
+                                        <div class="quantidade">
+                                            <button id="minus" class=" btn_plus" onclick="tirar_pedido('quantidade_tarte')"><p>-</p></button>
+                                            <span class="numberPlace" id="quantidade_tarte">0</span>
+                                            <button id="plus" class=" btn_plus" onclick="somar('quantidade_tarte'), adicionar_pedido()"><p>+</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card__face card__face--back   ">
+                                <div class="cardImgBack">
+                                    <img id="img0" class="cardImgBack" src="./imgs/TarteLimao.jpg" alt="">
+                                </div>
+                                <div class="cardText">
+                                    <div class="cardInfo">
+                                        <p class="cardTitleBack" id="prato0">Tarte de limão</p>
+                                        <div class="iconBack"></div>
+                                        <div class="foodInfoBack">
+                                            <div class="imgLactose backtwo">
+                                            </div>
+                                            <div class="imggluten">
+                                            </div>
+                                            <p id="cal">150 K/cal</p>
+                                            <hr class="hrBack">
+                                            <p class=" ingredientes"><b>Ingredientes:</b> Ovos, limão, açucar, óleo de côco, extrato de baunilha.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="filtersPrato">
+                    <h4>Filtros:</h4>
+                    <h5>Ingredientes:</h5>
+                    <div class="filterTitle">
+
+                        <hr>
+                        <div class="lista_filtros">
+                            <div id="camarao" class="btn_filtro" onclick="filterSelection('camarao'),changeColorPrato('camarao')">
+                                Camarão </div>
+                            <div id="grao" class="btn_filtro" onclick="filterSelection('grao'),changeColorPrato('grao')">
+                                Grão </div>
+                            <div id="massas" class="btn_filtro" onclick="filterSelection('massas'),changeColorPrato('massas')">
+                                Massas </div>
+                            <div id="peixe" class="btn_filtro" onclick="filterSelection('peixe'),changeColorPrato('peixe')">
+                                Peixe </div>
+
+                            <div id="vegetais" class="btn_filtro" onclick="filterSelection('vegetais'),changeColorPrato('vegetais')">
+                                Vegetais </div>
+                        </div>
+                        <h5 class="descer2">Intolerâncias:</h5>
+                        <div class="filterTitle">
+
+                            <hr class="descer1">
+                            <div class="lista_filtros descer">
+                                <div id="frutosSecos" class="btn_filtro " onclick="filterSelection('Prato'),changeColorPrato('frutosSecos')">
+                                    Frutos Secos </div>
+
+                                <div id="gluten" class="btn_filtro" onclick="changeColorPrato('gluten'),filterSelection('pratoGluten')">
+                                    Glúten
+                                </div>
+                                <div id="lactose" class="btn_filtro " onclick="filterSelection('lactosePrato'),changeColorPrato('lactose')">
+                                    Lactose</div>
+                                <div id="marisco" class=" btn_filtro " onclick="changeColorPrato('marisco')">
+                                    Marisco </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="filtersBebida">
+                    <h4>Filtros:</h4>
+                    <h5>Tipos de Bebida:</h5>
+                    <div class="filterTitle">
+
+                        <hr>
+                        <div class="lista_filtros">
+                            <div class="btn_filtro">
+                                Espirituosa </div>
+
+                            <div class="btn_filtro">
+                                Gaseficadas </div>
+
+                            <div class="btn_filtro">
+                                Cocktail </div>
+                        </div>
+
+
+                    </div>
+                    <h5>Origem:</h5>
+                    <div class="filterTitle">
+
+                        <hr>
+                        <div class="btn_filtro" onclick="filterSelection('nacional')">
+                            Produto nacional
+                        </div>
+
+                    </div>
+                    <h5>Intolerâncias:</h5>
+                    <div class="filterTitle">
+
+                        <hr>
+                        <div class="lista_filtros">
+                            <div class="btn_filtro">
+                                Frutos Secos </div>
+                            <div class="btn_filtro">
+                                Glúten
+                            </div>
+                            <div class="btn_filtro">
+                                Lactose</div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="filtersSobremesa">
+                    <h4>Filtros:</h4>
+                    <h5>Imgredientes:</h5>
+                    <div class="filterTitle">
+
+                        <hr>
+                        <div class="lista_filtros">
+                            <div id="chocolate" class="btn_filtro" onclick="filterSelection('chocolate'),changeColorSobremsa('chocolate')">
+                                Chocolate </div>
+
+                            <div id="docesTradicionais" class="btn_filtro" onclick="changeColorSobremsa('docesTradicionais')">
+                                Doces tradicionais </div>
+                            <div id="ovos" class="btn_filtro">
+                                Ovos </div>
+                            <div id="frutosSecosSobremesas" class="btn_filtro" onclick="changeColorSobremsa('frutosSecosSobremesas')">
+                                Frutos Secos </div>
+                        </div>
+
+
+                    </div>
+
+                    <h5 class="desce">Intolerâncias:</h5>
+                    <div class="filterTitle desce">
+
+                        <hr>
+                        <div class="lista_filtros">
+                            <div id="glutenSobremsa" class="btn_filtro" onclick="filterSelection('glutenSobremsa'),changeColorSobremsa('glutenSobremsa')">
+                                Glúten
+                            </div>
+                            <div id="lactoseSobremesa" class="btn_filtro" onclick="filterSelection('lactoseSobremesa'),changeColorSobremsa('lactoseSobremesa')">
+                                Lactose</div>
+                            <div id="glutemLactoseSobremesa" class="btn_filtro" onclick="filterSelection('glutenLactose'),changeColorSobremsa('glutemLactoseSobremesa')">
+                                Gluten e Lactose
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <button id="btn_verPedido" onclick="carrega_no_btn('icon_img3'), trataPedido(), mostraPedido()">Ver pedido</button>
+
+        </div>
+
+        <div class="ecras" id="ecra_faturas">
+            <div id="div_menu">
+                <div class="btn_back"><img onclick="mostrar_anterior(), destruir('adiciona_ao_pedido'), destruir('testa')" src="./imgs/logout.png" src=""></div>
+
+
+
+
+                <div id="filter3_faturas">
+                    <p>
+                        <p class="cresce">Há mais de uma semana &nbsp&nbsp </p>
+                        <p>|&nbsp&nbsp </p>
+                        <p class="cresce">Semana Passada &nbsp&nbsp </p>
+                        <p>|&nbsp&nbsp </p>
+                        <p class="cresce">Últimos 2 dias</p>
+                    </p>
+
+                </div>
+
+
+                <div class="limiteFaturas">
+                    <div id="faturas" class="faturas_lista">
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="ecras" id="ecra_pedidos">
+            <div id="div_menu">
+                <div class="btn_back"><img onclick="mostrar_anterior(), destruir('adiciona_ao_pedido'), destruir('testa')" src="./imgs/logout.png" src=""></div>
+
+                <div id="pedidosTitle">
+                    <p>
+                        Pedido
+                    </p>
+
+                </div>
+                <div id="pedidos_container">
+                    <div class="limiteTabela">
+                        <table class="tblPedido " id="tblPedido">
+
+                        </table>
+                    </div>
+
+
+                </div>
+                <button id="btn_complete" onclick="abrir_pop('Pop_faturas')">Finalizar Pedido</button>
+
+            </div>
+        </div>
+        <div class="chamar empregado ">
+            <img id="icon_img0" src="./imgs/mao.png" alt="" onclick="abrir_pop('Chamar_empregado'), fechar_pop('Pop_WC'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">
+
+            <img id="icon_img6" src="./imgs/help.png" alt="" onclick="abrir_pop('Pop_ajuda'), fechar_pop('Pop_WC'), fechar_pop('Chamar_empregado'), destruir('adiciona_ao_pedido'), destruir('testa')">
+
+        </div>
+
+
+        <nav class="navbar-container">
+
+
+
+            <ul class="list">
+                <div style="--position: 1;" data-indicator class="indicator">
+                </div>
+
+                <li class=" elNavBar">
+
+                    <li class=" elNavBar">
+                        <a href="#" id="btn_icon_img1" class="active" onclick="mostrar('ecra_menu'), fechar_pop('Pop_ajuda'), fechar_pop('Pop_WC'), fechar_pop('Chamar_empregado'), fechar_pop('adiciona_ao_pedido'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">
+                            <div class="icon">
+                                <img id="icon_img1" src="./imgs/menu.png" alt="">
+                            </div>
+                            <div class="text text1">Menu</div>
+                        </a>
+                    </li>
+
+                    <li class="elNavBar">
+                        <li>
+                            <a href="#" id="btn_icon_img2" onclick="mostrar('ecra_faturas'), fechar_pop('Pop_ajuda'), fechar_pop('Chamar_empregado'), fechar_pop('Pop_WC'), fechar_pop('adiciona_ao_pedido'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">
+                                <div class="icon">
+                                    <img id="icon_img2" src="./imgs/fatura.png" alt=""> </div>
+                                <div class="text text2">Faturas</div>
+                            </a>
+                        </li>
+                    </li>
+
+                    <li class=" elNavBar">
+                        <a href="#" id="btn_icon_img1" class="active" onclick="mostrar('pageOne'), fechar_pop('Pop_ajuda'), fechar_pop('Pop_WC'), fechar_pop('Chamar_empregado'), fechar_pop('adiciona_ao_pedido'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">
+                            <div class="icon">
+                                <img id="icon_img5" src="./imgs/home.png" alt="">
+                            </div>
+                            <div class="text text5">Home</div>
+                        </a>
+                    </li>
+                    <li class=" elNavBar">
+                        <li>
+                            <a href="#" id="btn_icon_img3" onclick="trataPedido(), fechar_pop('Pop_ajuda'), mostraPedido(), mostrar('ecra_pedidos'), fechar_pop('Chamar_empregado'), fechar_pop('Pop_WC'), fechar_pop('adiciona_ao_pedido'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">
+                                <div class="icon">
+                                    <span id="numero_pedidos">0</span>
+                                    <img id="icon_img3" src="./imgs/carrinho.png" alt=""> </div>
+                                <div class="text text3">Pedidos</div>
+                            </a>
+                        </li>
+                    </li>
+
+                    <li class=" elNavBar">
+                        <li>
+                            <a href="#" onclick="abrir_pop2('Pop_WC'), fechar_pop('Pop_ajuda'), fechar_pop('Chamar_empregado'), fechar_pop('adiciona_ao_pedido'), destruir('adiciona_ao_pedido'), destruir('testa'), fechar_pop('Pop_ajuda')">
+                                <div class="icon">
+                                    <img id="icon_img4" src="./imgs/casa_de_banho.png" alt=""> </div>
+                                <div class="text text4">WC</div>
+                            </a>
+                        </li>
+                    </li>
+
+
+            </ul>
+        </nav>
+
+
+    </div>
+
+    <button id="mudar_senha" onclick="somar('senha_atual'), notificacao_senha()">Aumentar a senha da casa de banho</button>
+
+    </div>
+
+</body>
+<div class="quantidade1" id="quant_teste">
+    <div id="minus1" class="btn_plus1  ">
+        <p>-</p>
+    </div>
+    <div id="plus1" class="btn_plus1  ">
+        <p>+</p>
+    </div>
+</div>
+
+</html>

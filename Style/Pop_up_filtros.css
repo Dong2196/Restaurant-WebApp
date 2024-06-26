@@ -1,0 +1,462 @@
+#random {
+    position: absolute;
+    width: 851pt;
+    height: 351pt;
+    background-color: rgb(245 245 220);
+    border-radius: 21.834929pt;
+    /* border: solid 2px rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    display: none;
+    z-index: 999;
+    border-left: 7.529286pt;
+    left: 51.952072pt;
+    top: 52.705pt;
+}
+
+.alinhamento {
+    position: relative;
+    left: -24pt;
+}
+
+.goncalo {
+    left: -47pt;
+    position: relative;
+}
+
+.cresce:hover {
+    transform: scale(1.1);
+}
+
+.heie {
+    position: relative;
+    left: 14pt;
+}
+
+.manel {
+    position: relative;
+    left: 50pt;
+}
+
+.realizado {
+    position: absolute;
+    top: -49pt;
+    font-size: 21pt;
+    left: -73pt;
+}
+
+#b_fecha_filtro {
+    position: relative;
+    width: 30pt;
+    height: 30pt;
+    border-radius: 8.5pt;
+    text-align: center;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    content: 'X';
+    font-weight: 300;
+    font-family: Arial, sans-serif;
+    float: right;
+    color: white;
+    top: -156pt;
+    left: 44pt;
+    border-radius: 39pt;
+}
+
+#b_fecha_filtro:hover {
+    transform: scale(1.2);
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#confirmar_filtro {
+    position: absolute;
+    width: 120pt;
+    top: 285pt;
+    justify-content: center;
+    background-color: #5e5550;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    left: 371.946715pt;
+    height: 40pt;
+    pointer-events: none;
+}
+
+#sec_filtro {
+    position: absolute;
+    top: 52.705pt;
+    left: 26.3525pt;
+}
+
+#seu_filtro {
+    position: absolute;
+    width: 255.995715pt;
+    height: 165.644286pt;
+    top: 90.351429pt;
+    right: 11.293929pt;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    background-color: rgb(83, 96, 110);
+}
+
+#numero_pedidos {
+    position: absolute;
+    top: -0.752929pt;
+    right: 1.823214pt;
+    background-color: rgba(195, 26, 26, 0.998);
+    border: solid 1.505857pt rgb(255, 255, 255);
+    height: 18.823214pt;
+    width: 18.823214pt;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: smaller;
+    color: white;
+    text-align: center;
+    display: none;
+    padding-top: 0pt;
+    z-index: 777;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+}
+
+#pop_up_filtros {
+    position: absolute;
+    width: 312.465358pt;
+    height: 353.876429pt;
+    top: 90.351429pt;
+    right: 52.705pt;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    background-color: rgb(83, 96, 110);
+    z-index: 99999999999;
+    display: none;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    justify-content: center;
+}
+
+#content_filtro {
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_confirmar_filtro2 {
+    position: absolute;
+    bottom: -18.823214pt;
+    top: 335.806143pt;
+    justify-content: center;
+    background-color: cadetblue;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    left: 95.621929pt;
+    background-color: white;
+    right: 1.505857pt;
+    width: 109.927572pt;
+    height: 27.105429pt;
+}
+
+#btn_fechar_filtro {
+    position: absolute;
+    bottom: -18.823214pt;
+    top: 155.856215pt;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: solid 21.505857pt rgb(0, 0, 0);
+    left: -20.329071pt;
+    background-color: white;
+    right: 0;
+    color: black;
+    width: 37.646429pt;
+    height: 37.646429pt;
+    border-radius: 50%;
+}
+
+#img_filtro {
+    width: 27.858357pt;
+    height: 20.329071pt;
+}
+
+
+/*apagar TRAOCA DE PEDIDO*/
+
+#testa {
+    box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+    position: absolute;
+    font-size: 18pt;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 301.171429pt;
+    height: 191.878572pt;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    background-color: beige;
+    border-radius: 8.5pt;
+    display: block;
+    z-index: 99999999999999999999999999;
+}
+
+#teste {
+    background-color: rgb(17, 0, 255);
+    position: absolute;
+    left: 50pt;
+    top: 650pt;
+    width: 120px;
+    height: 120px;
+}
+
+#cancela_pdd {
+    color: white;
+    position: absolute;
+    background-color: rgb(143, 0, 0);
+    height: 60.728429pt;
+    width: 108.445143pt;
+    top: 109.068143pt;
+    left: 167.150143pt;
+}
+
+#confirma_pdd {
+    color: black;
+    position: absolute;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    background-color: rgb(233, 233, 233);
+    height: 60.728429pt;
+    width: 108.445143pt;
+    top: 109.068143pt;
+    left: 16.564429pt;
+}
+
+#texto_pdd {
+    color: black;
+    left: 46.681571pt;
+    top: 37.646429pt;
+    font-size: x-large;
+    position: absolute;
+}
+
+#invisivel {
+    display: none;
+}
+
+
+/* Pop up de confirmar para adicionar da fatura para o pedido*/
+
+#adiciona_ao_pedido {
+    box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+    font-size: x-large;
+    color: black;
+    position: absolute;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 303.171429pt;
+    height: 222.878572pt;
+    /* border: solid 1.505857pt rgb(255, 255, 255); */
+    background-color: beige;
+    border-radius: 8.5pt;
+    display: block;
+    z-index: 99999999999999999999999999;
+}
+
+#botao_adiciona {
+    color: black;
+    position: absolute;
+    border: solid 1.505857pt rgb(255, 255, 255);
+    background-color: rgb(233, 233, 233);
+    height: 58.728429pt;
+    width: 114.445143pt;
+    top: 146.068143pt;
+    left: 16.564429pt;
+}
+
+#botao_cancela_adiciona {
+    color: white;
+    position: absolute;
+    background-color: rgb(143, 0, 0);
+    height: 58.728429pt;
+    width: 114.445143pt;
+    top: 146.068143pt;
+    left: 167.150143pt;
+}
+
+#texto_pop_add {
+    top: 38pt;
+    left: 21pt;
+    position: relative;
+}
+
+#Pop_ajuda {
+    position: absolute;
+    width: 610pt;
+    height: 320pt;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: beige;
+    display: none;
+    z-index: 999999999;
+    border-radius: 8.5pt;
+    color: black;
+    flex-wrap: wrap;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    overflow-x: hidden;
+    box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+}
+
+.descer {
+    position: relative;
+    top: 47pt;
+}
+
+.descer1 {
+    position: relative;
+    top: 47pt;
+}
+
+.descer2 {
+    position: relative;
+    top: 54pt;
+}
+
+.sobre {
+    position: relative;
+    display: flex;
+    left: 116pt;
+}
+
+.imgCriador {
+    position: relative;
+    height: 100pt;
+    border: solid 1px;
+    border-radius: 14%;
+}
+
+.imgCriador1 {
+    position: relative;
+    height: 100pt;
+    border: solid 1px;
+    border-radius: 14%;
+}
+
+.imgCriador2 {
+    position: relative;
+    height: 100pt;
+    border: solid 1px;
+    left: 69pt;
+    border-radius: 14%;
+}
+
+.imgCriador3 {
+    position: relative;
+    height: 100pt;
+    border: solid 1px;
+    border-radius: 14%;
+}
+
+.textoNome1 {
+    position: relative;
+    right: 27pt;
+    top: 10pt;
+}
+
+.textoNumero1 {
+    position: relative;
+    left: 6pt;
+}
+
+.textoNome2 {
+    position: relative;
+    right: -49pt;
+    top: 10pt;
+}
+
+.textoNumero2 {
+    position: relative;
+    left: 77pt;
+}
+
+.textoNome3 {
+    position: relative;
+    left: 6pt;
+    top: 10pt;
+}
+
+.textoNumero3 {
+    position: relative;
+    left: 9pt;
+}
+
+.textoNome {
+    position: relative;
+}
+
+.textoNumero {
+    position: relative;
+}
+
+#fechar_ajuda {
+    top: 6.752929pt;
+    left: 566.288572pt;
+    width: 30pt;
+    height: 30pt;
+    position: absolute;
+    border-radius: 22.587857pt;
+}
+
+#fechar_ajuda:hover {
+    transform: scale(1.1);
+}
+
+#title_ajuda {
+    position: relative;
+    top: 20pt;
+    margin: 0pt 270pt;
+}
+
+.texto_ajuda {
+    position: relative;
+    top: -88pt;
+    /* display: flex; */
+    left: -440pt;
+    width: 555pt;
+    left: 37pt;
+}
+
+#content_ajuda {
+    margin-left: auto;
+    font-size: 16pt;
+    /* margin: 0 auto; */
+    flex-wrap: wrap;
+    /* top: 7.529286pt; */
+    display: flex;
+    position: relative;
+    left: -87pt;
+    width: 505pt;
+    height: 27.858357pt;
+}

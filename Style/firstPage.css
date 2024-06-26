@@ -1,0 +1,88 @@
+.botaoHome {
+    width: 247pt;
+    height: 52pt;
+    background: #F0F0F0;
+    border-radius: 8pt;
+    left: auto;
+    color: #000000;
+    border-color: #F0F0F0;
+    position: relative;
+    margin: 7.293929pt auto;
+    background-color: #f5f5dc;
+    padding: 11.293929pt 24.093714pt;
+    top: 149pt;
+    text-align: left;
+}
+
+.testequant {
+    position: relative;
+    left: -535pt;
+    top: 17pt;
+}
+
+#plus1 {
+    position: relative;
+    left: -9pt;
+    height: 24pt;
+    top: -24pt;
+}
+
+#plus1 p {
+    position: relative;
+    left: 7pt;
+}
+
+#minus1 {
+    position: relative;
+    left: -57pt;
+    height: 24pt;
+}
+
+#quant_teste {
+    display: none;
+}
+
+#divOla {
+    position: absolute;
+    text-align: center;
+    border-radius: 14.305643pt;
+    margin-top: 13.552714pt;
+    height: 70.775286pt;
+    left: -152.091572pt;
+    width: 602.342858pt;
+    font-size: 33pt;
+}
+
+.helpIcon {
+    background-image: url(../imgs/help_branco.png);
+    background-size: 20pt;
+}
+
+.buttons-icon-pos {
+    position: relative;
+}
+
+.menu_icon {
+    left: 141.550572pt;
+}
+
+.faturas_icon {
+    left: 127.244929pt;
+}
+
+.pedidos_icon {
+    left: 122.727357pt;
+}
+
+.empregado_icon {
+    left: 27.105429pt;
+}
+
+.botaoHelp {}
+
+#icon_Help {
+    width: 32pt;
+    left: 129pt;
+    top: -4pt;
+    position: relative;
+}

@@ -1,0 +1,207 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    html {
+        z-index: -100;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .filtroFosco {
+        height: 542.108572pt;
+        width: 903.514287pt;
+        filter: blur(3.764643pt);
+        z-index: -10;
+        position: absolute;
+    }
+    
+    .container {
+        position: relative;
+        width: 963.748573pt;
+        height: 542.108572pt;
+        overflow: hidden;
+        border: 0.752929pt solid white;
+        background-image: url(../imgs/backGround.png);
+        background-size: 990pt;
+        margin: auto;
+        top: 22.587857pt;
+    }
+    
+    #home_page_buttons {
+        margin-left: auto;
+        font-size: x-large;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        top: 7.529286pt;
+        display: flex;
+        position: relative;
+        padding: auto;
+        width: 301.171429pt;
+        height: 27.858357pt;
+    }
+    
+    #pageOne {
+        display: block;
+        bottom: -1.505857pt;
+        position: relative;
+        left: -12.799786pt;
+        width: 963.748573pt;
+        height: 542.108572pt;
+    }
+    
+    #div_menu {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        left: 8pt;
+    }
+    
+    #ecra_menu {
+        display: none;
+        height: 414.110715pt;
+    }
+    
+    #ecra_faturas {
+        display: none;
+        width: 903.514287pt;
+        height: 414.110715pt;
+    }
+    
+    #ecra_pedidos {
+        display: none;
+        position: relative;
+        width: 903.514287pt;
+        height: 414.110715pt;
+    }
+    
+    .ecrãs {
+        position: relative;
+        display: flex;
+        border: solid 1.505857pt rgb(255, 255, 255);
+        border-radius: 0.752929pt;
+        width: 941.160716pt;
+        height: 414.110715pt;
+        margin: 7.529286pt auto;
+        overflow-y: auto;
+        flex-wrap: wrap;
+    }
+    
+    button {
+        left: 451.757143pt;
+        top: 301.171429pt;
+        position: relative;
+        padding: 6.023429pt;
+        width: 75.292857pt;
+        border: 1.505857pt solid white;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        border-radius: 3.764643pt;
+        transition: 0.1s;
+    }
+    
+    button:hover {
+        transform: scale(1.15);
+        color: rgb(0, 0, 0);
+    }
+    
+    .profileImage {
+        display: inline-block;
+        margin-left: 1.5cm;
+    }
+    
+    .profileImage img {
+        border: 1.505857pt solid rgb(255, 255, 255);
+        border-radius: 100%;
+        width: 52.705pt;
+        height: 52.705pt;
+        position: relative;
+    }
+    
+    .profileImage img:hover {
+        border: 1.505857pt solid rgb(0, 0, 0);
+    }
+    
+    #profile {
+        margin: auto;
+        border: 0.752929pt solid rgb(0, 0, 0);
+        display: inline-block;
+        width: 963.748573pt;
+        height: 150.585714pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #btn_maisFiltros {
+        top: 16.564429pt;
+        position: relative;
+        left: 7.529286pt;
+    }
+    
+    .btn_back {
+        position: relative;
+        left: -3.764643pt;
+        top: 8.282214pt;
+        /* background: beige; */
+        padding: auto;
+        /* max-width: fit-content; */
+        filter: invert(1);
+        /* justify-content: center; */
+        border-radius: 7.529286pt;
+    }
+    
+    .btn_back img {
+        height: 37.646429pt;
+        left: 18pt;
+        position: relative;
+        transform: scale(1.15);
+    }
+    
+    .btn_back img:hover {
+        transform: scale(1.25);
+    }
+    
+    #mudar_senha {
+        position: relative;
+        top: -98pt;
+        left: -2.119286pt;
+        width: 82.939286pt;
+        height: 70.022357pt;
+        background-color: rgb(217, 116, 116);
+    }
+    
+    #icon_ecra0 {
+        width: 30.117143pt;
+        position: relative;
+        left: 27.105429pt;
+        top: -3.011714pt;
+    }
+    
+    #icon_ecra1 {
+        width: 30.117143pt;
+        position: relative;
+        left: 130.256643pt;
+        top: -3.011714pt;
+    }
+    
+    #icon_ecra2 {
+        width: 30.117143pt;
+        position: relative;
+        left: 118.209786pt;
+        top: -3.011714pt;
+    }
+    
+    #icon_ecra3 {
+        width: 30.117143pt;
+        position: relative;
+        left: 115.198072pt;
+        top: -3.011714pt;
+    }
+    
+    .material-icons {
+        display: none !important;
+    }

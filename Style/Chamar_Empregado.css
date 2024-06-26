@@ -1,0 +1,339 @@
+        #sobremesa {
+            width: 99pt;
+        }
+        
+        #Chamar_empregado {
+            width: 360pt;
+            height: 165pt;
+            color: #000000;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: beige;
+            display: none;
+            animation: fadeIn 1s;
+            border-radius: 16.5pt;
+            -webkit-animation: fadeIn 1s;
+            position: absolute;
+            z-index: 999999;
+            box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+        }
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #text_empregado {
+            top: 38.25pt;
+            position: absolute;
+            left: 26.25pt;
+            font-size: 14pt;
+        }
+        
+        #btn_fecha_empregado {
+            top: 5.752929pt;
+            left: 329.288572pt;
+            width: 26.117143pt;
+            height: 26.117143pt;
+            position: relative;
+            border-radius: 22.587857pt;
+        }
+        
+        #btn_fecha_empregado:hover {
+            transform: scale(1.1);
+        }
+        
+        #btn_chamar {
+            position: relative;
+            top: 95.621929pt;
+            margin-left: auto;
+            left: -102.398286pt;
+            width: 143.056429pt;
+            height: 49.693286pt;
+            border: solid 1.505857pt rgb(255, 255, 255);
+            background-color: rgb(55 59 63);
+        }
+        
+        #btn_pagar {
+            position: absolute;
+            background-color: rgb(55 59 63);
+            left: 315pt;
+            top: 226pt;
+            width: 129pt;
+            height: 45pt;
+            color: white;
+        }
+        
+        #btn_pagar_depois {
+            position: absolute;
+            background-color: rgb(55 59 63);
+            left: 148pt;
+            top: 226pt;
+            width: 129pt;
+            height: 45pt;
+            color: white;
+        }
+        
+        #text_previsao {
+            position: absolute;
+            top: 84.292857pt;
+            left: 216.716714pt;
+            width: 400pt;
+            font-size: 17pt;
+        }
+        
+        .text_pagamento {
+            position: absolute;
+            top: 43pt;
+            font-size: 14pt;
+            width: 305pt;
+            text-align: center;
+            left: 142pt;
+        }
+        
+        .fotos_pagamennto {
+            position: relative;
+            /* justify-content: center; */
+            left: 60pt;
+            top: -111pt;
+        }
+        
+        .forms_position {
+            position: absolute;
+            left: 148pt;
+            top: -100pt
+        }
+        
+        .cartao {
+            position: absolute;
+            background-image: url(../imgs/visa.png);
+            background-size: 63pt;
+            width: 66pt;
+            height: 53pt;
+            padding: 7pt;
+            top: 194pt;
+            left: -5pt;
+            background-color: #0000009c;
+        }
+        
+        .mbway {
+            position: absolute;
+            background-image: url(../imgs/mbway.png);
+            background-size: 85pt;
+            width: 90pt;
+            height: 53pt;
+            /* padding: 7pt; */
+            top: 194pt;
+            left: 90pt;
+            background-color: #0000009c;
+        }
+        
+        .dinheiro {
+            position: absolute;
+            background-image: url(../imgs/dinheiro.png);
+            background-size: 63pt;
+            width: 66pt;
+            height: 53pt;
+            padding: 7pt;
+            top: 194pt;
+            left: 201pt;
+            background-color: #0000009c;
+        }
+        
+        .dinheiro:hover {
+            transform: scale(1.1);
+        }
+        
+        .mbway:hover {
+            transform: scale(1.1);
+        }
+        
+        .cartao:hover {
+            transform: scale(1.1);
+        }
+        
+        #fname {
+            position: relative;
+            top: 287pt;
+            border-radius: 7pt;
+            background-color: #3ea37500;
+        }
+        
+        #lname {
+            position: relative;
+            top: 265pt;
+            left: 169pt;
+            border-radius: 7pt;
+            background-color: #3ea37500;
+        }
+        
+        .text_fatura {
+            width: 400pt;
+            height: 10pt;
+            text-align: center;
+            left: -4pt;
+            top: 151pt;
+            font-size: 14pt;
+            position: relative;
+        }
+        
+        #Pop_faturas {
+            color: black;
+            box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+            position: absolute;
+            width: 572pt;
+            height: 300pt;
+            top: 76.469643pt;
+            right: 193pt;
+            z-index: 1;
+            border: solid 1.505857pt rgb(255, 255, 255);
+            background-color: beige;
+            animation: fadeIn 1s;
+            -webkit-animation: fadeIn 1s;
+            justify-content: center;
+            display: none;
+            border-radius: 10pt;
+        }
+        
+        #senha_cliente {
+            left: 135pt;
+            position: absolute;
+        }
+        
+        #senha_atual {
+            left: 210pt;
+            top: 1pt;
+            position: absolute;
+            color: white !important;
+        }
+        
+        #Pop_WC {
+            box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+            width: 376.464286pt;
+            height: 182.443pt;
+            position: absolute;
+            color: white !important;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            z-index: 9999999;
+            background-color: beige;
+            display: none;
+            border-radius: 17.317357pt;
+            animation: fadeIn 1s;
+            -webkit-animation: fadeIn 1s;
+            justify-content: center;
+        }
+        
+        #btnWC {
+            top: 88.292857pt;
+            left: 267.289643pt;
+            position: absolute;
+            background-color: #84A07C;
+        }
+        
+        #texto_livres {
+            border-radius: 20pt;
+            position: absolute;
+            left: 35.998929pt;
+            top: 92.563357pt;
+            border: solid 1.505857pt rgb(255, 255, 255);
+            background-color: rgb(49, 59, 70);
+            width: 225.220429pt;
+            height: 24.846643pt;
+            text-align: center;
+            color: white;
+            font-size: 14pt
+        }
+        
+        #texto_senha {
+            border-radius: 20pt;
+            text-align: center;
+            position: absolute;
+            left: 93.363143pt;
+            top: 146.821072pt;
+            border: solid 1.505857pt rgb(255, 255, 255);
+            background-color: rgb(49, 59, 70);
+            width: 198.020215pt;
+            height: 26.3525pt;
+            display: none;
+            color: white;
+            justify-content: center;
+        }
+        
+        #btn_fechar_WC {
+            top: 5.494143pt;
+            left: 340.312pt;
+            position: absolute;
+            width: 30pt;
+            height: 30pt;
+            border-radius: 22.587857pt;
+        }
+        
+        #btn_fechar_WC:hover {
+            transform: scale(1.1);
+        }
+        /* Noticações na fatura e do WC*/
+        
+        .notificacao {
+            box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0pt -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+            border: solid 1.505857pt #53674E;
+            background-color: #84A07C;
+            position: absolute;
+            z-index: 999999999999999;
+            top: 14.517571pt;
+            left: 353pt;
+            padding-top: 4pt;
+            width: 274pt;
+            height: 67pt;
+            text-align: center;
+            border-radius: 10pt;
+            color: black;
+            display: none;
+            animation: fadeIn 1s;
+            -webkit-animation: fadeIn 1s;
+            justify-content: center;
+        }
+        
+        .mensagem_cofirmacao {
+            font-size: x-large;
+            text-align: center;
+        }
+        
+        #notificacao_empregado {
+            font-size: x-large;
+            text-align: center;
+            padding-top: 15pt;
+        }
+        
+        #notificacao_WC {
+            font-size: x-large;
+            text-align: center;
+        }
+        /** maria **/
+        
+        #Titulo_WC {
+            margin-top: 25px;
+            color: black;
+        }

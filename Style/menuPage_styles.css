@@ -1,0 +1,611 @@
+    #menu {
+        position: relative;
+        display: flex;
+        border: solid 1.505857pt rgba(255, 255, 255, 0);
+        border-radius: 0.752929pt;
+        width: 749pt;
+        height: 370pt;
+        margin: 7.529286pt auto;
+        /* filter: blur(1px); */
+        border-radius: 8.5pt;
+        background: #1b1e21d6;
+        overflow-y: auto;
+        flex-wrap: wrap;
+        top: 3pt;
+        padding-left: 10pt;
+    }
+    
+    * {
+        font-family: Calibri!important;
+    }
+    
+    .desce {
+        top: 63pt
+    }
+    
+    #filtersPrato {
+        display: block;
+        position: relative;
+        width: 166pt;
+        margin-right: 16pt;
+        height: 370pt;
+        top: 10pt;
+        border-radius: 8.5pt;
+        background: #1b1e21d6;
+        border: solid 1.505857pt rgba(255, 255, 255, 0);
+    }
+    
+    #filtersBebida {
+        display: none;
+        position: relative;
+        width: 166pt;
+        margin-right: 16pt;
+        height: 370pt;
+        top: 10pt;
+        border-radius: 8.5pt;
+        background: #1b1e21d6;
+        border: solid 1.505857pt rgba(255, 255, 255, 0);
+    }
+    
+    #filtersSobremesa {
+        display: none;
+        position: relative;
+        width: 166pt;
+        margin-right: 16pt;
+        height: 370pt;
+        top: 10pt;
+        border-radius: 8.5pt;
+        background: #1b1e21d6;
+        border: solid 1.505857pt rgba(255, 255, 255, 0);
+    }
+    
+    #filter3 p {
+        color: rgb(0, 0, 0);
+        /* font-size: 18pt; */
+        position: relative;
+        padding-left: 10pt;
+        /* border: solid; */
+        left: 13pt;
+        top: 3pt;
+    }
+    
+    #filter3 {
+        left: -6pt;
+        font-size: x-large;
+        margin: 5pt auto;
+        top: 4pt;
+        display: flex;
+        position: relative;
+        width: 498pt;
+        margin-left: auto;
+        box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0px -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+        border: solid 0.752929pt white;
+        height: 37pt;
+        border-radius: 8.5pt;
+        background: beige;
+    }
+    
+    #filter3_faturas {
+        left: 10pt;
+        font-size: x-large;
+        margin: 5pt auto;
+        /* flex-wrap: wrap; */
+        top: 4pt;
+        display: flex;
+        position: relative;
+        color: #1b1e21;
+        /* padding: 4pt 139pt; */
+        /* margin-right: auto; */
+        width: 479pt;
+        margin-left: auto;
+        box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0px -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+        border: solid 0.752929pt white;
+        height: 37pt;
+        border-radius: 8.5pt;
+        background: beige;
+    }
+    
+    #filter3_faturas p {
+        top: 3pt;
+        position: relative;
+        left: 8pt;
+    }
+    
+    #pedidosTitle {
+        left: -6pt;
+        font-size: 23pt;
+        margin: 5pt auto;
+        /* flex-wrap: wrap; */
+        /* padding: 3pt 15pt; */
+        top: 4pt;
+        color: black;
+        display: flex;
+        position: relative;
+        padding: auto;
+        padding: 1pt 142pt;
+        /* margin-right: auto; */
+        width: 350pt;
+        /* margin-left: auto; */
+        box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0px -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+        border: solid 0.752929pt white;
+        height: 37pt;
+        border-radius: 20pt;
+        background: beige;
+    }
+    
+    .card {
+        margin: 7.529286pt;
+        flex-wrap: wrap;
+        animation: fadeIn 1s;
+        position: relative;
+        border: 0.752929pt rgb(26, 23, 23) solid;
+        border-radius: 3.764643pt;
+        width: 225.878572pt;
+        height: 135.527143pt;
+        box-shadow: 7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), -7.529286pt 15.058571pt 15.058571pt 0 rgb(0 0 0 / 40%), 0px -1.505857pt 15.058571pt 0 rgb(0 0 0 / 40%);
+        background-color: #fcf9e4ab;
+    }
+    
+    .cardImg {
+        border-radius: 3.764643pt;
+        /* border: black 1px solid; */
+        width: 109.9pt;
+        height: 134.9pt;
+        top: -0.1pt;
+        left: -0.2pt;
+        position: relative;
+    }
+    
+    .cardImgBack {
+        border-radius: 3.764643pt;
+        /* border: black 1px solid; */
+        width: 90pt;
+        height: 90pt;
+        top: 11pt;
+        left: 3pt;
+        position: relative;
+    }
+    
+    #info {
+        padding: 1.505857pt;
+        border-radius: 30%;
+        border: black 0.752929pt solid;
+        background: white;
+        left: 78.304572pt;
+        top: 128.750786pt;
+        color: black;
+        position: relative;
+    }
+    
+    .btn_criar {
+        position: relative;
+        top: -30.117143pt;
+        padding: initial;
+        height: 26.3525pt;
+        width: 110.6805pt;
+        left: -50.446214pt;
+        color: white;
+        background: #00000082;
+    }
+    
+    .cardText {
+        border-radius: 3.764643pt;
+        /* border: black 1px solid; */
+        width: 109.174643pt;
+        height: 146.821072pt;
+        position: relative;
+        left: 2.258786pt;
+    }
+    
+    .cardMassa p {
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .cardMassa img {
+        position: absolute;
+        width: 213.078786pt;
+        top: 6.023429pt;
+        left: 5.2705pt;
+        border-radius: 5%;
+        height: 122.727357pt;
+    }
+    
+    .cardInfo {
+        border-radius: 3.764643pt;
+        /* border: black 1px solid; */
+        height: 71.528214pt;
+        color: black;
+    }
+    
+    .foodInfo {
+        bottom: 11.293929pt;
+        /* border: black 1px solid; */
+        position: absolute;
+        height: 37.646429pt;
+        color: black;
+        top: 71.3525pt;
+    }
+    
+    .foodInfo hr {
+        color: black;
+        width: 90.351429pt;
+        opacity: 1;
+    }
+    
+    .foodInfo img {
+        position: relative;
+        height: 30.117143pt;
+    }
+    
+    .cardQuantidade {
+        border-radius: 3.764643pt;
+        height: 60.234286pt;
+    }
+    
+    .preço {
+        margin-top: 7.529286pt;
+        font-size: large;
+        color: black;
+    }
+    
+    .valor {
+        top: 27.858357pt;
+        left: 0pt;
+        position: relative;
+        color: black;
+    }
+    
+    #cal {
+        top: 11.293929pt;
+        position: relative;
+        /* border: solid; */
+        /* margin-top: 5px; */
+        font-size: 9.035143pt;
+    }
+    
+    .cardTitle {
+        font-size: 13pt;
+        color: #333;
+        font-weight: 150;
+        margin-bottom: 6.023429pt;
+        top: 15pt;
+        padding: 0pt 1pt;
+        font-weight: bold;
+        left: 2pt;
+        position: absolute;
+    }
+    
+    .quantidade {
+        height: 22.587857pt;
+        width: 52.705pt;
+        position: relative;
+        /* border: solid 1px rgb(253, 253, 253); */
+        display: flex;
+        left: 52.705pt;
+        bottom: 6.023429pt;
+    }
+    
+    .quantidade div {
+        background-color: #333;
+    }
+    
+    #minus {
+        position: relative;
+        height: 18.823214pt;
+        width: 18.823214pt;
+        border: 0.752929pt black solid;
+        border-radius: 30%;
+        color: #1b1e21;
+        top: 0.752929pt;
+        transform: scale(1.1);
+        font-weight: bold;
+        left: 0pt;
+        padding-top: initial;
+    }
+    
+    #plus {
+        position: relative;
+        height: 18.823214pt;
+        width: 18.823214pt;
+        border: 0.752929pt black solid;
+        border-radius: 30%;
+        color: #1b1e21;
+        top: 0.752929pt;
+        transform: scale(1.1);
+        padding-top: initial;
+        font-weight: bold;
+        left: 0pt;
+    }
+    
+    #minus:hover {
+        background-color: #625c58;
+        transform: scale(1.2);
+    }
+    
+    #plus:hover {
+        background-color: #625c58;
+        transform: scale(1.2);
+    }
+    
+    .numberPlace {
+        transform: scale(1.1);
+        color: black;
+        font-weight: bold;
+        position: relative;
+        margin-left: 3.764643pt;
+        margin-right: 3.764643pt;
+    }
+    
+    #btn_verPedido {
+        position: absolute;
+        background-color: beige;
+        left: 782pt;
+        color: black;
+        animation: fadeIn 1s;
+        top: 373pt;
+        display: none !important;
+        width: 130pt;
+        border: black 2pt solid;
+        font-size: 19pt;
+    }
+    
+    .filterTitle {
+        position: relative;
+        /* display: flex;*/
+    }
+    
+    h5 {
+        top: 10pt;
+        position: relative;
+        margin: 0.752929pt;
+    }
+    
+    #O_Popup {
+        position: absolute;
+        background: rgba(255, 0, 0, 0.436);
+        width: 19.576143pt;
+        height: 19.576143pt;
+        top: -9.788071pt;
+        left: 16.564429pt;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        font-size: smaller;
+        font-weight: bold;
+        border-color: white;
+        color: black;
+    }
+    
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /* The actual popup */
+    
+    .popuptext {
+        visibility: hidden;
+        width: 120.468572pt;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 4.517571pt;
+        padding: 6.023429pt 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60.234286pt;
+    }
+    /* Popup arrow */
+    
+    .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -3.764643pt;
+        border-width: 3.764643pt;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+    /* Toggle this class - hide and show the popup */
+    
+    .show {
+        animation: fadeIn 1s;
+        -webkit-animation: fadeIn 1s;
+    }
+    /* Add animation (fade in the popup) */
+    
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .filterDiv {
+        display: none;
+    }
+    
+    .show {
+        display: flex;
+    }
+    
+    .btn_filtro {
+        border: solid rgba(14, 14, 14, 0) 0.752929pt;
+        width: max-content;
+        background: beige;
+        color: black;
+        display: flex;
+        padding: 3pt;
+        flex-wrap: wrap;
+        /* border: white 5pt solid; */
+        border-radius: 4pt;
+        margin-bottom: 2pt;
+        /* width: 40px; */
+        font-size: 14pt;
+        position: relative;
+        height: 22pt;
+        align-content: center;
+        margin: 4pt 3.764643pt;
+    }
+    
+    .btn_filtro:hover {
+        background-color: bisque;
+        transform: scale(1.1);
+    }
+    
+    .lista_filtros {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        height: 48pt;
+    }
+    
+    .btn_plus {
+        position: relative;
+    }
+    
+    .btn_random {
+        position: absolute;
+        background-color: #5e5550;
+        width: 50pt;
+        height: 25pt;
+        color: rgb(255, 255, 255);
+        padding-top: 3pt;
+        border-radius: 6pt;
+        padding-left: 7pt;
+        top: 187pt;
+    }
+    
+    .btn_random:hover {
+        transform: scale(1.2);
+    }
+    
+    #bebida {}
+    
+    .btn_bebida {
+        border: 0.752929pt solid black;
+        left: 93pt;
+    }
+    
+    .btn_prato {
+        border: 0.752929pt solid black;
+        left: 93pt;
+    }
+    
+    .btn_sobremesa {
+        border: 0.752929pt solid black;
+        left: 95pt;
+    }
+    
+    .cardRandom {
+        top: -57pt;
+        left: -12pt;
+    }
+    
+    #prato:hover {
+        transform: scale(1.1);
+    }
+    
+    #bebida:hover {
+        transform: scale(1.1);
+    }
+    
+    #sobremesa:hover {
+        transform: scale(1.1);
+    }
+    
+    #sugestao:hover {
+        transform: scale(1.1);
+    }
+    
+    .infoBtnCss {
+        background-image: url(../imgs/information.png);
+        /* border: solid white 1pt; */
+        position: relative;
+        width: 21pt;
+        background-size: 21pt;
+        top: 3pt;
+        /* background: beige; */
+        border-radius: 10pt;
+        left: -215pt;
+        text-size-adjust: 10pt;
+        padding-left: 9pt;
+        padding-top: 4pt;
+        font-size: 22pt;
+        height: 21pt;
+    }
+    
+    .btnBack {
+        position: absolute;
+        width: 23pt;
+        background-size: 21pt;
+        top: 2pt;
+        background-image: url(../imgs/cancel.png);
+        /* background-color: red; */
+        left: 199pt;
+        /* border: 2px red solid; */
+        height: 23pt;
+        background-size: 23pt;
+    }
+    
+    .btnBack:hover {
+        transform: scale(1.1)!important;
+    }
+    
+    .infoBtnCss:hover {
+        transform: scale(1.2);
+    }
+    
+    .btnflipback:hover {
+        transform: scale(1.2);
+    }
+    
+    .cracha {
+        background-image: url(../imgs/cracha.png);
+        background-size: 208pt;
+        left: 392pt;
+        top: 163pt;
+        height: 62pt;
+        filter: brightness(17.5);
+        position: relative;
+        width: 207pt;
+    }
+    
+    .cracha1 {
+        background-image: url(../imgs/sustainable.png);
+        background-size: 184pt;
+        left: -332pt;
+        top: -394pt;
+        height: 143pt;
+        filter: brightness(1.5);
+        position: relative;
+        width: 193pt;
+    }
+    
+    .borderFilter {
+        border-radius: 6pt;
+        position: relative;
+        padding-left: -4pt;
+        /* max-width: max-content; */
+        padding-bottom: 27pt;
+    }

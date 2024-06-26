@@ -1,0 +1,185 @@
+.btn_add {
+    position: relative;
+    /* border: solid black 1.505857pt; */
+    left: 343pt;
+    background-image: url(../imgs/add.png);
+    background-size: 24pt;
+    border-radius: 5pt;
+    padding: 0.752929pt;
+    height: 24pt;
+    width: 24pt;
+    top: -218pt;
+}
+
+.btn_clean {
+    filter: invert(1);
+    position: relative;
+    /* border: solid black 1.505857pt; */
+    left: 305pt;
+    background-image: url(../imgs/lixo.png);
+    background-size: 29pt;
+    border-radius: 5pt;
+    padding: 0.752929pt;
+    height: 27pt;
+    filter: brightness(0.1);
+    width: 27pt;
+    top: -182pt;
+}
+
+.card_faturas {
+    margin: 7pt 8pt;
+    position: relative;
+    left: 17pt;
+    border: 0.752929pt rgb(26, 23, 23) solid;
+    display: table-caption;
+    border-radius: 3.764643pt;
+    width: 401pt;
+    overflow-y: scroll;
+    height: 261pt;
+    padding-top: 35pt;
+    overflow-x: clip;
+    min-height: 144pt pt;
+    background-color: beige;
+    color: black;
+}
+
+.btn_add:hover {
+    transform: scale(1.1);
+}
+
+#faturas {
+    display: flex;
+    /* border: solid 1.505857pt #343a40; */
+    border-radius: 8.5pt;
+    width: 977pt;
+    height: 327pt;
+    position: relative;
+    padding-top: 23pt;
+    padding-left: 29pt;
+    top: 6pt;
+    margin: 7.529286pt pt auto;
+    /* filter: blur(1px); */
+    /* background: #1b1e21d6; */
+    margin-left: -5pt;
+    /* left: -2pt; */
+    flex-wrap: wrap;
+    /* left: 28pt; */
+    overflow-x: clip;
+    overflow-y: auto;
+}
+
+.div_btn_faturas {
+    position: absolute;
+    bottom: 0pt;
+}
+
+.limiteFaturas {
+    position: relative;
+    display: flex;
+    border-radius: 8.5pt;
+    width: 918pt;
+    height: 370pt;
+    margin: 10pt 6pt;
+    /* filter: blur(1px); */
+    border-radius: 8.5pt;
+    background: #1b1e21d6;
+    /* margin-left: auto; */
+    flex-wrap: wrap;
+    left: -1.682643pt;
+}
+
+.divElmFatura {
+    display: flex;
+    padding: 0pt 15pt 0pt 15pt;
+}
+
+.elFatura0 {
+    position: relative;
+    padding: 0pt 15pt;
+}
+
+.elFatura1 {
+    position: relative;
+    padding: 0pt 15pt;
+}
+
+.elFatura2 {
+    position: absolute;
+    padding: 0pt 10pt;
+    right: 24pt;
+}
+
+.l0 {
+    position: relative;
+}
+
+.valorTotal {
+    position: relative;
+    left: 309pt;
+    width: 51pt;
+    top: 16pt;
+    text-align: end;
+}
+
+.valorTotaltext {
+    position: relative;
+    left: 259pt;
+    top: -15pt;
+    width: 51pt;
+}
+
+.data {
+    position: absolute;
+    top: 16pt;
+    left: 21pt;
+    width: 169pt;
+}
+
+.hrFaturas {
+    position: relative;
+    width: 349pt;
+    top: 41pt;
+    left: 22pt;
+}
+
+.hrFaturasTitulo {
+    position: relative;
+    width: 349pt;
+    /* top: 41pt; */
+    left: 22pt;
+    top: 4pt;
+}
+
+.faturasTitulo {
+    position: relative;
+    top: 21pt;
+    display: flex;
+    font-weight: bold;
+}
+
+.titulo0 {
+    position: relative;
+    left: 26pt;
+}
+
+.titulo1 {
+    left: 137pt;
+    position: relative;
+}
+
+.titulo2 {
+    left: 265pt;
+    position: relative;
+}
+
+.nome {
+    position: relative;
+    top: -39pt;
+    left: 21pt;
+}
+
+.contribuinte {
+    position: relative;
+    top: 17pt;
+    left: 21pt;
+}
